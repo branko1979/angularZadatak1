@@ -1,0 +1,40 @@
+<div *ngIf ="url != '/login' && url !='/'ng serve">
+  <div>
+    <div fxLayout = "row wrap">
+      <div fxFlex="100%" style="background-color: lightyellow; height: 60px;">
+        <div style="float:left;">
+          <img src="https://cdn.freebiesupply.com/logos/large/2x/angular-3-logo-png-transparent.png" style="height: 50px; width: auto;">
+        </div>
+        <div style="float:right;">
+           <ngx-avatar name="Angular Admin"></ngx-avatar> <!-- Dodatak za Avatar sa sajta-->
+        </div>
+      </div>
+      <div fxFlex="10%" style="background-color: lightgreen; height: 1000px;">
+      <div class="sidebar">
+        <ul style="list-style-type: none;">
+          <li>
+            <a href="/home">Home</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>  
+          <li>
+            <a href="/price">Price</a>
+          </li>
+          <li>
+            <a href="/login">Sing Out</a>
+          </li>
+  
+        </ul>
+      </div>
+      </div>
+      <div fxFlex="90%" style=" height: 1000px;">
+        <router-outlet></router-outlet>
+      </div>
+  
+    </div>
+  </div>
+</div>
+<div *ngIf ="url == '/login' || url=='/'">
+  <router-outlet></router-outlet>
+</div>

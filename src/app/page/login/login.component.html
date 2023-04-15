@@ -1,0 +1,23 @@
+
+<div style="width: 50%; margin: 0 auto">
+    <h2>Prijava</h2>
+    <form [formGroup]="loginForm">
+
+    <mat-form-field appereance="outline" style="width: 100%;">
+    <mat-label>
+        Korisničko ime
+    </mat-label>
+    <input matInput placeholder="Korisničko ime" formControlName="username" required>
+    </mat-form-field> 
+     
+    <mat-form-field appereance="outline" style="width: 100%;">
+        <mat-label>
+            Lozinka
+        </mat-label>
+        <input matInput placeholder="Lozinka" formControlName="password" type ="password">
+        </mat-form-field> 
+
+    </form>
+    <button mat-button (click)="login()">Prijava</button>
+
+</div>

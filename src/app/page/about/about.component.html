@@ -1,0 +1,41 @@
+<div>
+
+
+
+<mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="body">
+      <mat-header-cell *matHeaderCellDef> Body </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.body}} </mat-cell>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> Id</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+    </ng-container>
+
+
+      <ng-container matColumnDef="userId">
+        <mat-header-cell *matHeaderCellDef> User ID </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.userId}} </mat-cell>
+      </ng-container>
+  
+    <!-- Header and Row Declarations -->
+    <!--<mat-header-row *matHeaderRowDef="['username', 'age', 'title']"></mat-header-row> -->
+    <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayColumns"></mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+
+</div>
